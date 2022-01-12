@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, {useState, useEffect} from 'react'
 import './App.scss'
 
@@ -77,8 +78,17 @@ const Weather = () => {
                     <h2>{temp}°C</h2>
                     <p>{tempMax}°C / {tempMin}°C</p>
                     <h3>{weather}</h3>
-                    <p>Humidity: {humid}%</p>
-                    <p>Wind: {wind} mps</p>
+                    <div className='bottom'>
+                      <div>
+                        <img src='https://ik.imagekit.io/icvij1rszoy/wind-svgrepo-com_pTG1o3d8Q.svg?updatedAt=1641989166549' />
+                        <h6>{wind} mps</h6>
+                      </div>
+                      <div>
+                        <img src='https://ik.imagekit.io/icvij1rszoy/humidity-svgrepo-com_FaZjA09nP.svg?updatedAt=1641989166518' />
+                        <h6>{humid}%</h6>
+                      </div>
+                    </div>
+                    
                 </div>
         </div>
     )
