@@ -1,9 +1,11 @@
 $primaryColor: #9cc1ef73;
 $mainBg: #5173ef;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
 
 html {
     background: $mainBg;
     height: 100vh;
+    font-family: 'Mulish', sans-serif;
 }
 
 #root {
@@ -61,6 +63,10 @@ html {
     border-radius: 1rem;
     background: $primaryColor;
 
+    img {
+        width: 7rem;
+    }
+
     p {
         font-size: 12px;
         // margin-top
@@ -68,6 +74,10 @@ html {
     
     h2 {
         margin: 0;
+    }
+
+    .date {
+        margin-top: -14px;   
     }
 }
 

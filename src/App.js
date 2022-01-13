@@ -29,7 +29,7 @@ const Weather = () => {
         const API_KEY = "eb9db3765f36b162322c15e2a090055e"
         const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}&units=metric`)
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
 
         setCity(data.name)
         setCountry(data.sys.country)
@@ -80,7 +80,7 @@ const Weather = () => {
               ) : (
                 <>
                   <h1>{city}, {country}</h1>
-                  <p>{time}</p>
+                  <p className='date'>{time}</p>
                   <img src={`http://openweathermap.org/img/wn/${icons}@2x.png`} />
                   <h2>{temp}°C</h2>
                   <p>{tempMax}°C / {tempMin}°C</p>
