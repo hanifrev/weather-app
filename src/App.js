@@ -15,7 +15,7 @@ const Weather = () => {
     const [times, setTimes] = useState("")
     const [wind, setWind] = useState("")
     const [loading, setLoading] = useState(true)
-    const apiKey = process.env.REACT_APP_API_KEY
+    // const apiKey = process.env.REACT_APP_API_KEY
     // console.log(apiKey)
 
     useEffect(() => {
@@ -27,7 +27,9 @@ const Weather = () => {
       e.preventDefault()
         try {
 
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=metric`)
+        
+        const API_KEY = "eb9db3765f36b162322c15e2a090055e"
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_KEY}&units=metric`)
         const data = await res.json()
         // console.log(data)
 
